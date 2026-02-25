@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recoat - Package Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0a; color: #fff; font-family: system-ui, sans-serif; }
+        h1 { text-align: center; padding: 20px; font-size: 1.4rem; color: #888; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 12px; padding: 12px; }
+        .card { position: relative; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid #222; }
+        .card-label { position: absolute; top: 8px; left: 12px; z-index: 10; font-size: 0.85rem; color: #fff; background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 4px; pointer-events: none; }
+        .card-status { position: absolute; bottom: 8px; right: 12px; z-index: 10; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; pointer-events: none; }
+        .ok { background: rgba(0,200,100,0.3); color: #0f8; }
+        .err { background: rgba(200,0,50,0.3); color: #f44; }
+    </style>
+</head>
+<body>
+    <h1>Recoat Package Test</h1>
+    <div class="grid">
+        <div class="card" id="aurora"><span class="card-label">Aurora</span></div>
+        <div class="card" id="ascii"><span class="card-label">AsciiGrid</span></div>
+        <div class="card" id="glitch"><span class="card-label">GlitchFog</span></div>
+        <div class="card" id="static"><span class="card-label">StaticNoise</span></div>
+        <div class="card" id="voronoi"><span class="card-label">VoronoiShatter</span></div>
+        <div class="card" id="sand"><span class="card-label">MagneticSand</span></div>
+        <div class="card" id="pixel"><span class="card-label">PixelCity</span></div>
+        <div class="card" id="underwater"><span class="card-label">Underwater</span></div>
+        <div class="card" id="labyrinth"><span class="card-label">Labyrinth (Three.js)</span></div>
+        <div class="card" id="chromatic"><span class="card-label">ChromaticSpace (Three.js)</span></div>
+        <div class="card" id="stairs"><span class="card-label">ImpossibleStairs (Three.js)</span></div>
+        <div class="card" id="fiber"><span class="card-label">FiberNodes (Three.js)</span></div>
+        <div class="card" id="deepocean"><span class="card-label">DeepOcean (Three.js)</span></div>
+        <div class="card" id="typewriter" style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-family:monospace"><span class="card-label">Typewriter (Text)</span><span id="typewriter-text">Hello, World!</span></div>
+        <div class="card" id="glitchtext" style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-family:monospace"><span class="card-label">GlitchText (Text)</span><span id="glitchtext-text">RECOAT LIBRARY</span></div>
+        <div class="card" id="scramble" style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-family:monospace"><span class="card-label">ScrambleReveal (Text)</span><span id="scramble-text">DECRYPTING...</span></div>
+        <div class="card" id="chromatic" style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-family:monospace;background:#0a0a0a"><span class="card-label">ChromaticText (Text)</span><span id="chromatic-text">CHROMATIC</span></div>
+        <div class="card" id="gradient" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">GradientText (Text)</span><span id="gradient-text">GRADIENT FLOW</span></div>
+        <div class="card" id="neonpulse" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">NeonPulse (Text)</span><span id="neonpulse-text">NEON PULSE</span></div>
+        <div class="card" id="wavybounce" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">WavyBounce (Text)</span><span id="wavybounce-text">WAVY BOUNCE</span></div>
+        <div class="card" id="matrixrain" style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-family:monospace;background:#0a0a0a"><span class="card-label">MatrixRain (Text)</span><span id="matrixrain-text">MATRIX</span></div>
+        <div class="card" id="gravitydrop" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">GravityDrop (Text)</span><span id="gravitydrop-text">GRAVITY</span></div>
+        <div class="card" id="inkbleed" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">InkBleed (Text)</span><span id="inkbleed-text">INK BLEED</span></div>
+        <div class="card" id="magnetic" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">MagneticAssemble (Text)</span><span id="magnetic-text">MAGNETIC</span></div>
+        <div class="card" id="echotrail" style="display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:bold;font-family:system-ui;background:#0a0a0a"><span class="card-label">EchoTrail (Text)</span><span id="echotrail-text">ECHO TRAIL</span></div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/examples/jsm/Addons.js": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/Addons.js"
+        }
+    }
+    </script>
+
+    <script type="module">
+        function statusBadge(cardId, ok, msg) {
+            const card = document.getElementById(cardId);
+            const badge = document.createElement('span');
+            badge.className = 'card-status ' + (ok ? 'ok' : 'err');
+            badge.textContent = ok ? 'OK' : msg;
+            card.appendChild(badge);
+        }
+
+        // --- Canvas backgrounds (recoat) ---
+        async function testCanvas() {
+            try {
+                const { Aurora, AsciiGrid, GlitchFog, StaticNoise, VoronoiShatter, MagneticSand, PixelCity, Underwater } = await import('../dist/index.mjs');
+
+                const tests = [
+                    ['aurora', () => Aurora({ container: '#aurora' })],
+                    ['ascii', () => AsciiGrid({ container: '#ascii' })],
+                    ['glitch', () => GlitchFog({ container: '#glitch' })],
+                    ['static', () => StaticNoise({ container: '#static' })],
+                    ['voronoi', () => VoronoiShatter({ container: '#voronoi' })],
+                    ['sand', () => MagneticSand({ container: '#sand' })],
+                    ['pixel', () => PixelCity({ container: '#pixel' })],
+                    ['underwater', () => Underwater({ container: '#underwater' })],
+                ];
+
+                for (const [id, factory] of tests) {
+                    try {
+                        const bg = factory();
+                        bg.start();
+                        statusBadge(id, true);
+                    } catch (e) {
+                        statusBadge(id, false, e.message);
+                        console.error(id, e);
+                    }
+                }
+            } catch (e) {
+                console.error('Canvas import failed:', e);
+            }
+        }
+
+        // --- Three.js backgrounds (recoat/three) ---
+        async function testThree() {
+            try {
+                const { Labyrinth, ChromaticSpace, ImpossibleStairs, FiberNodes, DeepOcean } = await import('../dist/three.mjs');
+
+                const tests = [
+                    ['labyrinth', () => Labyrinth({ container: '#labyrinth' })],
+                    ['chromatic', () => ChromaticSpace({ container: '#chromatic' })],
+                    ['stairs', () => ImpossibleStairs({ container: '#stairs' })],
+                    ['fiber', () => FiberNodes({ container: '#fiber' })],
+                    ['deepocean', () => DeepOcean({ container: '#deepocean' })],
+                ];
+
+                for (const [id, factory] of tests) {
+                    try {
+                        const bg = factory();
+                        bg.start();
+                        statusBadge(id, true);
+                    } catch (e) {
+                        statusBadge(id, false, e.message);
+                        console.error(id, e);
+                    }
+                }
+            } catch (e) {
+                console.error('Three import failed:', e);
+            }
+        }
+
+        // --- Text animations (recoat/text) ---
+        async function testText() {
+            try {
+                const { Typewriter, GlitchText, ScrambleReveal, ChromaticText, GradientText, NeonPulse, WavyBounce, MatrixRain, GravityDrop, InkBleed, MagneticAssemble, EchoTrail } = await import('../dist/text.mjs');
+
+                const tests = [
+                    ['typewriter', () => { const a = Typewriter({ element: '#typewriter-text', text: 'Hello, World!' }); a.play(); return a; }],
+                    ['glitchtext', () => { const a = GlitchText({ element: '#glitchtext-text', text: 'RECOAT LIBRARY' }); a.play(); return a; }],
+                    ['scramble', () => { const a = ScrambleReveal({ element: '#scramble-text', text: 'DECRYPTING...' }); a.play(); return a; }],
+                    ['chromatic', () => { const a = ChromaticText({ element: '#chromatic-text', text: 'CHROMATIC' }); a.play(); return a; }],
+                    ['gradient', () => { const a = GradientText({ element: '#gradient-text', text: 'GRADIENT FLOW' }); a.play(); return a; }],
+                    ['neonpulse', () => { const a = NeonPulse({ element: '#neonpulse-text', text: 'NEON PULSE' }); a.play(); return a; }],
+                    ['wavybounce', () => { const a = WavyBounce({ element: '#wavybounce-text', text: 'WAVY BOUNCE' }); a.play(); return a; }],
+                    ['gravitydrop', () => { const a = GravityDrop({ element: '#gravitydrop-text', text: 'GRAVITY' }); a.play(); return a; }],
+                    ['inkbleed', () => { const a = InkBleed({ element: '#inkbleed-text', text: 'INK BLEED' }); a.play(); return a; }],
+                    ['magnetic', () => { const a = MagneticAssemble({ element: '#magnetic-text', text: 'MAGNETIC' }); a.play(); return a; }],
+                    ['echotrail', () => { const a = EchoTrail({ element: '#echotrail-text', text: 'ECHO TRAIL' }); a.play(); return a; }],
+                    ['matrixrain', () => { const a = MatrixRain({ element: '#matrixrain-text', text: 'MATRIX' }); a.play(); return a; }],
+                ];
+
+                for (const [id, factory] of tests) {
+                    try {
+                        factory();
+                        statusBadge(id, true);
+                    } catch (e) {
+                        statusBadge(id, false, e.message);
+                        console.error(id, e);
+                    }
+                }
+            } catch (e) {
+                console.error('Text import failed:', e);
+            }
+        }
+
+        testCanvas();
+        testThree();
+        testText();
+    </script>
+</body>
+</html>

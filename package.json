@@ -1,0 +1,68 @@
+{
+    "name": "recoat",
+    "version": "0.1.0",
+    "description": "Animated backgrounds and text effects for the web. Zero dependencies.",
+    "author": "Murat Kamci (https://github.com/muratkamci)",
+    "homepage": "https://github.com/muratkamci/recoat#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/muratkamci/recoat.git"
+    },
+    "bugs": {
+        "url": "https://github.com/muratkamci/recoat/issues"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./three": {
+            "types": "./dist/three.d.ts",
+            "import": "./dist/three.mjs",
+            "require": "./dist/three.js"
+        },
+        "./text": {
+            "types": "./dist/text.d.ts",
+            "import": "./dist/text.mjs",
+            "require": "./dist/text.js"
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch"
+    },
+    "keywords": [
+        "backgrounds",
+        "canvas",
+        "animation",
+        "text-animation",
+        "typewriter",
+        "glitch",
+        "design",
+        "web",
+        "three.js",
+        "webgl",
+        "3d",
+        "particles"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "tsup": "^8.5.1"
+    },
+    "peerDependencies": {
+        "three": ">=0.150.0"
+    },
+    "peerDependenciesMeta": {
+        "three": {
+            "optional": true
+        }
+    }
+}

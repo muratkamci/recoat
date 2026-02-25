@@ -1,0 +1,13 @@
+export { Typewriter } from './text/Typewriter';
+export { GlitchText } from './text/GlitchText';
+export { ScrambleReveal } from './text/ScrambleReveal';
+export { ChromaticText } from './text/ChromaticText';
+export { GradientText } from './text/GradientText';
+export { NeonPulse } from './text/NeonPulse';
+export { WavyBounce } from './text/WavyBounce';
+export { MatrixRain } from './text/MatrixRain';
+export { GravityDrop } from './text/GravityDrop';
+export { InkBleed } from './text/InkBleed';
+export { MagneticAssemble } from './text/MagneticAssemble';
+export { EchoTrail } from './text/EchoTrail';
+export type { TypewriterConfig, GlitchTextConfig, ScrambleRevealConfig, ChromaticTextConfig, GradientTextConfig, NeonPulseConfig, WavyBounceConfig, MatrixRainConfig, GravityDropConfig, InkBleedConfig, MagneticAssembleConfig, EchoTrailConfig, TextAnimationConfig, TextAnimationInstance } from './types';

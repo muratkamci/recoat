@@ -1,0 +1,10 @@
+export { createBackground } from './createBackground';
+export { Aurora } from './backgrounds/Aurora';
+export { AsciiGrid } from './backgrounds/AsciiGrid';
+export { GlitchFog } from './backgrounds/GlitchFog';
+export { StaticNoise } from './backgrounds/StaticNoise';
+export { VoronoiShatter } from './backgrounds/VoronoiShatter';
+export { MagneticSand } from './backgrounds/MagneticSand';
+export { PixelCity } from './backgrounds/PixelCity';
+export { Underwater } from './backgrounds/Underwater';
+export type { BackgroundConfig, BackgroundInstance, AuroraConfig, AsciiGridConfig, GlitchFogConfig, StaticNoiseConfig, VoronoiShatterConfig, MagneticSandConfig, PixelCityConfig, UnderwaterConfig } from './types';
