@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "Animated backgrounds and text effects for the web. Zero dependencies.",
     "author": "Murat Kamci (https://github.com/muratkamci)",
-    "homepage": "https://github.com/muratkamci/recoat#readme",
+    "homepage": "https://recoat.dev",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/muratkamci/recoat.git"

@@ -2,6 +2,8 @@
 
 Animated backgrounds and text effects for the web. Zero dependencies.
 
+**[recoat.dev](https://recoat.dev)** — Live demos, interactive playgrounds & documentation.
+
 - **13 Backgrounds** — Canvas-based (zero deps) + Three.js-powered (optional peer dep)
 - **12 Text Animations** — DOM-based text effects, no canvas needed
 - **TypeScript** — Full type definitions included
@@ -154,6 +156,10 @@ onUnmounted(() => bg?.destroy());
     Aurora({ container: '#bg' }).start();
 </script>
 ```
+
+## Documentation
+
+Visit **[recoat.dev](https://recoat.dev)** for full documentation, live demos, and interactive playgrounds for every effect.
 
 ## License
 
